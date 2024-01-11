@@ -2,3 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "custom/companion"
+import "./controllers/task_controller"
+import "./controllers/sync_controller"
+
