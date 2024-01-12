@@ -8,3 +8,4 @@
 <% end %>
 
 <%= link_to 'Nuevo', new_task_path %>
+<%= button_to 'Sincronizar', '#', data: { controller: "sync", action: "click->sync#sync" } %>

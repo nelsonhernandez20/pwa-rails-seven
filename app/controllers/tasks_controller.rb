@@ -17,10 +17,12 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-
+  
     if @task.save
       redirect_to @task, notice: 'Task was successfully created.'
     else
+      # Imprime los errores en la consola para depurar
+      puts @task.errors.full_messages
       render :new
     end
   end

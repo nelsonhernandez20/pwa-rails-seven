@@ -1,11 +1,11 @@
-<%= form_with model: @task do |form| %>
+<%= form_with model: @task, html: { data: { controller: "task", action: "submit->task#submit" } } do |form| %>
   <div>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, data: { task_target: "title" } %>
   </div>
   <div>
     <%= form.label :description %><br>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, data: { task_target: "description" } %>
   </div>
   <div>
     <%= form.submit %>
