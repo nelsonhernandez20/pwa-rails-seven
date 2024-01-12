@@ -1,6 +1,6 @@
-<nav>
-  <ul>
-    <li><%= link_to 'Tasks', tasks_path %></li>
-    <li><%= link_to 'New Task', new_task_path %></li>
+<nav class="bg-blue-500 p-4 mb-10">
+  <ul class="flex space-x-4">
+    <li class="text-white"><%= link_to 'Tasks', tasks_path, class: "hover:underline" %></li>
+    <li class="text-white"><%= link_to 'New Task', new_task_path, class: "hover:underline" %></li>
   </ul>
 </nav>

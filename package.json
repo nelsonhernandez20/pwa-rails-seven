@@ -6,6 +6,12 @@
   "author": "nelsonhernandez20 <nelsonhernandez335@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "localforage": "^1.10.0"
+    "autoprefixer": "^10.4.16",
+    "localforage": "^1.10.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   }
 }
