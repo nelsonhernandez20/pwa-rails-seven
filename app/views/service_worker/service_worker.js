@@ -24,21 +24,11 @@ const { registerRoute } = workbox.routing;
 
 // Cache the task index page
 registerRoute(
-  ({ url }) =>
-    url.pathname.startsWith("/tasks/index") ||
-    url.pathname.startsWith("/tasks/new"),
+  ({ url }) => url.pathname === "/" || url.pathname.startsWith("/tasks"),
   new CacheFirst({
     cacheName: "tasks",
   })
 );
-
-// For all other pages we use the network first
-// registerRoute(
-//   ({request, url}) => request.destination === "document" || request.destination === "",
-//   new NetworkFirst({
-//     cacheName: 'documents',
-//   })
-// );
 
 registerRoute(
   ({ request, url }) =>

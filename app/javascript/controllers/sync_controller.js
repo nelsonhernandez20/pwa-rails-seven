@@ -20,7 +20,7 @@ export default class extends Controller {
           'meta[name="csrf-token"]'
         ).content;
         console.log(task, "tasks");
-        const response = await fetch("https://40aa-181-129-181-146.ngrok-free.app/tasks", {
+        const response = await fetch("https://ea5e-181-129-181-147.ngrok-free.app/tasks", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
